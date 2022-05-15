@@ -80,3 +80,7 @@ class DBStorage():
                 self.save()
             except Exception as Ex:
                 pass
+
+    def close(self):
+        """Calls the __session.remove() method"""
+        self.__session.remove()
